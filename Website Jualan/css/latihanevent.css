@@ -1,0 +1,172 @@
+
+/* NAVBAR */
+.event-navbar {
+    padding: 18px 8%;
+    background: #101010;
+    border-bottom: 1px solid #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-brand {
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.event-back {
+    background: #f5c518;
+    color: #090909;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+/* CONTAINER */
+.event-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+/* HEADING */
+.event-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.event-heading h1 {
+    font-size: clamp(35px, 5vw, 50px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.event-heading h1 span {
+    color: #f5c518;
+}
+
+.event-heading > p:last-child {
+    color: #a5a5a5;
+    font-size: 13px;
+}
+
+/* GRID */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+}
+
+/* CARD */
+.event-card {
+    background: #1c1c1c;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    border-color: #f5c518;
+    box-shadow: 0 10px 30px #f5c51818;
+}
+
+/* IMAGE */
+.event-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENT */
+.event-info {
+    padding: 25px;
+}
+
+.event-label {
+    color: #f5c518;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.event-info h3 {
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.event-info > p {
+    color: #a5a5a5;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+/* TANGGAL */
+.event-date {
+    border-top: 1px solid #383838;
+    margin-top: 20px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-date span {
+    color: #888;
+    font-size: 11px;
+}
+
+.event-date strong {
+    color: #f5c518;
+    font-size: 14px;
+}
+
+.event-button {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    padding: 13px 15px;
+    background: #f5c518;
+    color: #090909;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.event-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .event-container {
+        width: 90%;
+        padding: 55px 0;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .event-card img {
+        height: 220px;
+    }
+}

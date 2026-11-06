@@ -1,0 +1,205 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.latihan-navbar {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111111;
+    border-bottom: 1px solid #333;
+}
+
+.latihan-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.latihan-brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.latihan-back {
+    text-decoration: none;
+    color: #080808;
+    background: #ffd700;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.latihan-back:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* CONTAINER */
+.latihan-container {
+    width: 84%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+/* HEADING */
+.latihan-heading {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.latihan-eyebrow {
+    color: #ffd700;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.latihan-heading h1 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.latihan-heading h1 span {
+    color: #ffd700;
+}
+
+.latihan-heading > p:last-child {
+    color: #aaaaaa;
+    line-height: 1.8;
+}
+
+/* KELOMPOK BULAN */
+.bulan-group {
+    margin-bottom: 80px;
+}
+
+.judul-bulan {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    padding-left: 18px;
+    border-left: 5px solid #ffd700;
+}
+
+.judul-bulan span {
+    color: #ffd700;
+}
+
+/* GRID FOTO */
+.latihan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+}
+
+/* CARD FOTO */
+.latihan-card {
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.latihan-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffd700;
+    box-shadow: 0 10px 25px #ffd70020;
+}
+
+.latihan-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* INFORMASI FOTO */
+.latihan-info {
+    padding: 22px;
+}
+
+.latihan-info h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.latihan-info p {
+    color: #ffd700;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.latihan-footer {
+    background: #111111;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 25px;
+    color: #888888;
+    font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .latihan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .latihan-container {
+        width: 90%;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .latihan-navbar {
+        padding: 15px 5%;
+    }
+
+    .latihan-heading h1 {
+        font-size: 28px;
+    }
+
+    .latihan-container {
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .latihan-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .latihan-card img {
+        height: 220px;
+    }
+
+    .judul-bulan {
+        font-size: 23px;
+    }
+}

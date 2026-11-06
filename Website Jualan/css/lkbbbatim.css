@@ -1,0 +1,454 @@
+
+/* =================================
+   DASAR HALAMAN
+================================= */
+
+body {
+    margin: 0;
+    background: #090909;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #101010;
+    border-bottom: 1px solid #292929;
+}
+
+.detail-header h2 {
+    color: #ffd700;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.back-button {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    color: white;
+}
+
+.header-label {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero-detail {
+    text-align: center;
+    padding: 85px 20px 65px;
+}
+
+.eyebrow {
+    color: #ffd700;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-detail h1 {
+    color: #ffd700;
+    font-size: 40px;
+    margin: 18px 0;
+}
+
+.hero-detail p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   INFORMASI EVENT
+================================= */
+
+.event-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 8% 60px;
+}
+
+.information-card {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.information-card span {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.information-card h3 {
+    color: #ffd700;
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   JUDUL SECTION
+================================= */
+
+.member-section,
+.documentation-section {
+    padding: 55px 8%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #ffd700;
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* =================================
+   GRID PASUKAN INTI
+================================= */
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* =================================
+   KARTU ANGGOTA
+================================= */
+
+.member-card {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 13px;
+    text-align: center;
+    transition: 0.3s;
+    min-width: 0;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffd700;
+}
+
+
+/* FOTO ANGGOTA */
+
+.member-photo {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
+    background: #252525;
+}
+
+
+/* FOTO PENGGANTI JIKA TIDAK ADA */
+
+.photo-fallback {
+    width: 100%;
+    height: 190px;
+    display: none;
+    place-items: center;
+    background: #252525;
+    color: #ffd700;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+
+/* NOMOR ANGGOTA */
+
+.member-number {
+    display: inline-block;
+    background: #ffd700;
+    color: #090909;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+
+/* NAMA */
+
+.member-card h3 {
+    color: white;
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+
+/* JABATAN */
+
+.member-position {
+    color: #ffd700;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 7px 0;
+}
+
+
+/* BANJAR DAN SHAF */
+
+.member-location {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   PEMIMPIN NOMOR 1
+================================= */
+
+.member-card.leader-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 240px;
+    border: 2px solid #ffd700;
+    margin-bottom: 15px;
+}
+
+.leader-card .member-photo {
+    height: 220px;
+}
+
+
+/* =================================
+   PASUKAN CADANGAN
+================================= */
+
+.reserve-section {
+    border-top: 1px solid #292929;
+}
+
+.reserve-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* =================================
+   DOKUMENTASI
+================================= */
+
+.documentation-section {
+    border-top: 1px solid #292929;
+}
+
+.documentation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.documentation-card {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.documentation-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffd700;
+}
+
+.documentation-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: #252525;
+}
+
+.documentation-info {
+    padding: 20px;
+}
+
+.documentation-info h3 {
+    color: #ffd700;
+    margin-top: 0;
+}
+
+.documentation-info p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+
+/* FOTO PENGGANTI DOKUMENTASI */
+
+.documentation-fallback {
+    height: 230px;
+    display: none;
+    place-items: center;
+    color: #ffd700;
+    background: #252525;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.detail-footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #101010;
+    border-top: 1px solid #292929;
+}
+
+.detail-footer h3 {
+    color: #ffd700;
+    letter-spacing: 3px;
+}
+
+.detail-footer p,
+.detail-footer span {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+    .member-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .documentation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   HP
+================================= */
+
+@media (max-width: 600px) {
+
+    .detail-header {
+        padding: 18px 5%;
+    }
+
+    .header-label {
+        display: none;
+    }
+
+    .hero-detail h1 {
+        font-size: 27px;
+    }
+
+    .event-information {
+        grid-template-columns: 1fr;
+        padding: 20px 6% 40px;
+    }
+
+    .member-section,
+    .documentation-section {
+        padding: 40px 6%;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .member-card {
+        padding: 9px;
+    }
+
+    .member-photo {
+        height: 145px;
+    }
+
+    .member-card h3 {
+        font-size: 13px;
+    }
+
+    .member-card.leader-card {
+        width: 180px;
+    }
+
+    .leader-card .member-photo {
+        height: 180px;
+    }
+
+    .reserve-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .documentation-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.back-button {
+    display: inline-block;
+    padding: 11px 20px;
+    background: #ffd700;
+    color: #090909;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: white;
+    color: #090909;
+    transform: translateY(-3px);
+}

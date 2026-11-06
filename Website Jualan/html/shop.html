@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAJURSA SHOP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../html/index.html" class="brand"><span>KAJURSA</span></a>
+
+    <nav class="nav-links">
+        <a href="../html/index.html">Beranda</a>
+        <a href="../html/index.html#about">Tentang</a>
+        <a href="../html/shop.html" class="active">Shop</a>
+    </nav>
+
+    <button class="cart-button" onclick="toggleCart()">
+        <span>🛒</span> Keranjang
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+</header>
+
+<main class="shop-page">
+
+    <section class="shop-hero">
+        <p class="eyebrow">KAJURSA FUNDRAISING</p>
+        <h1><span>KAJURSA</span> SHOP</h1>
+        <p>
+            Nikmati jajanan pilihan dari KAJURSA.
+            Setiap pesananmu mendukung kegiatan ekstrakurikuler kami.
+        </p>
+        <div class="shop-status">
+            <span class="status-dot"></span>
+            OPEN PRE-ORDER
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="section-heading">
+            <p class="eyebrow">OUR PRODUCTS</p>
+            <h2>Menu <span>Danus</span></h2>
+            <p>Pilih produk favoritmu dan masukkan ke keranjang.</p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- PRODUK 1 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="assets/es-gabin.jpg" alt="Es Gabin">
+                    <span class="product-tag">BEST SELLER</span>
+                </div>
+
+                <div class="product-info">
+                    <p class="product-category">SNACK</p>
+                    <h3>Es Gabin</h3>
+                    <p class="product-description">
+                        Camilan gabin dengan isian lembut
+                        yang cocok dinikmati kapan saja.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>Rp5.000</strong>
+                        <button class="add-button"
+                                onclick="addToCart('gabin')">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRODUK 2 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="assets/samyang-roll.jpg" alt="Samyang Roll">
+                    <span class="product-tag">FAVORIT</span>
+                </div>
+
+                <div class="product-info">
+                    <p class="product-category">SPICY SNACK</p>
+                    <h3>Samyang Roll</h3>
+                    <p class="product-description">
+                        Camilan gulung dengan cita rasa
+                        pedas yang menggugah selera.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>Rp2.000</strong>
+                        <button class="add-button"
+                                onclick="addToCart('samyang')">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="shop-banner">
+        <p class="eyebrow">THANK YOU FOR SUPPORTING US</p>
+        <h2>ONE PURCHASE,<br><span>ONE SUPPORT.</span></h2>
+        <p>Terima kasih sudah mendukung perjalanan KAJURSA.</p>
+        <a href="../html/index.html" class="btn btn-outline">Kembali ke Beranda</a>
+    </section>
+
+</main>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">YOUR ORDER</p>
+                <h2>Keranjang</h2>
+            </div>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Keranjang kamu masih kosong.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total Pesanan</span>
+                <strong id="cartTotal">Rp0</strong>
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                CHECKOUT VIA WHATSAPP ↗
+            </button>
+
+            <small>Pesanan akan dikirim melalui WhatsApp.</small>
+        </div>
+    </aside>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="toast" id="toast">
+    <span>✓</span>
+    <p id="toastMessage">Produk ditambahkan!</p>
+</div>
+
+<footer class="footer">
+    <h3><span>KAJURSA</span></h3>
+    <p>SMK Pasundan Rancaekek</p>
+    <small>© 2026 KAJURSA. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>
